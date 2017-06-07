@@ -1,0 +1,22 @@
+{
+	"fields": [
+		{
+			"name": "numero",
+			"type": "smallint"
+		},
+		{
+			"name": "nome",
+			"type": "string"
+		}
+	],
+	"validations": [
+		{
+			"field": "numero",
+			"rules": "required"
+		},
+		{
+			"field": "nome",
+			"rules": "required|max:100"
+		}
+	]
+}

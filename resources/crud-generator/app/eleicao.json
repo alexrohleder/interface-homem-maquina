@@ -1,0 +1,34 @@
+{
+	"fields": [
+		{
+			"name": "nome",
+			"type": "string"
+		},
+		{
+			"name": "ano",
+			"type": "smallint"
+		},
+		{
+			"name": "data",
+			"type": "date"
+		},
+		{
+			"name": "ativo",
+			"type": "tinyint"
+		}
+	],
+	"validations": [
+		{
+			"field": "nome",
+			"rules": "required|max:100"
+		},
+		{
+			"field": "ano",
+			"rules": "required"
+		},
+		{
+			"field": "data",
+			"rules": "required"
+		}
+	]
+}

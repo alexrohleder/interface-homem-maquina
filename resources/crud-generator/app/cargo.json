@@ -1,0 +1,22 @@
+{
+	"fields": [
+		{
+			"name": "nome",
+			"type": "varchar"
+		},
+		{
+			"name": "nr_ordem",
+			"type": "smallint"
+		}
+	],
+	"validations": [
+		{
+			"field": "nome",
+			"rules": "required|max:100"
+		},
+		{
+			"field": "nr_ordem",
+			"rules": "required"
+		}
+	]
+}

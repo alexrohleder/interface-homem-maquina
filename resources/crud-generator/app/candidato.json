@@ -1,0 +1,71 @@
+{
+	"fields": [
+		{
+			"name": "numero",
+			"type": "integer"
+		},
+		{
+			"name": "nome",
+			"type": "string"
+		},
+		{
+			"name": "id_partido",
+			"type": "integer#unsigned"
+		},
+		{
+			"name": "id_cargo",
+			"type": "integer#unsigned"
+		},
+		{
+			"name": "id_eleicao",
+			"type": "integer#unsigned"
+		}
+	],
+	"foreign_keys": [
+		{
+			"column": "id_partido",
+			"references": "id",
+			"on": "partido",
+			"onDelete": "cascade"
+		},
+		{
+			"column": "id_cargo",
+			"references": "id",
+			"on": "cargo",
+			"onDelete": "cascade"
+		},
+		{
+			"column": "id_eleicao",
+			"references": "id",
+			"on": "eleicao",
+			"onDelete": "cascade"
+		}
+	],
+	"relationships": [
+		{
+			"name": "partido",
+			"type": "belongsTo",
+			"class": "App\\Partido"
+		},
+		{
+			"name": "cargo",
+			"type": "belongsTo",
+			"class": "App\\Cargo"
+		},
+		{
+			"name": "eleicao",
+			"type": "belongsTo",
+			"class": "App\\Eleicao"
+		}
+	],
+	"validations": [
+		{
+			"field": "numero",
+			"rules": "required"
+		},
+		{
+			"field": "nome",
+			"rules": "required|max:100"
+		}
+	]
+}
